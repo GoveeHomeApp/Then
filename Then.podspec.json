@@ -1,0 +1,34 @@
+{
+  "name": "Then",
+  "version": "3.0.0",
+  "summary": "Super sweet syntactic sugar for Swift initializers.",
+  "homepage": "https://github.com/devxoul/Then",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Suyeol Jeon": "devxoul@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/devxoul/Then.git",
+    "tag": "3.0.0"
+  },
+  "requires_arc": true,
+  "swift_versions": "5.0",
+  "static_framework": true,
+  "platforms": {
+    "ios": "11.0",
+    "watchos": "7.0"
+  },
+  "swift_version": "5.0",
+  "vendored_frameworks": "Then.xcframework",
+  "ios": {
+    "public_header_files": "Then.xcframework/ios-arm64/*/Headers/*.h",
+    "source_files": "Then.xcframework/ios-arm64/*/Headers/*.h"
+  },
+  "watchos": {
+    "public_header_files": "Then.xcframework/watchos-arm64_arm64_32_armv7k/*/Headers/*.h",
+    "source_files": "Then.xcframework/watchos-arm64_arm64_32_armv7k/*/Headers/*.h"
+  }
+}

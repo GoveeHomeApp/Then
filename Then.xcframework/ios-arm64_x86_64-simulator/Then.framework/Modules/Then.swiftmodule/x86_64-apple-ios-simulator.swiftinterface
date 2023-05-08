@@ -1,0 +1,56 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Then
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreGraphics
+import Foundation
+import Swift
+@_exported import Then
+import UIKit.UIGeometry
+import UIKit
+import _Concurrency
+import _StringProcessing
+public protocol Then {
+}
+extension Then {
+  @inlinable public func with(_ block: (inout Self) throws -> Swift.Void) rethrows -> Self {
+    var copy = self
+    try block(&copy)
+    return copy
+  }
+  @inlinable public func `do`(_ block: (Self) throws -> Swift.Void) rethrows {
+    try block(self)
+  }
+}
+extension Then where Self : AnyObject {
+  @inlinable public func then(_ block: (Self) throws -> Swift.Void) rethrows -> Self {
+    try block(self)
+    return self
+  }
+}
+extension ObjectiveC.NSObject : Then {
+}
+extension CoreFoundation.CGPoint : Then {
+}
+extension CoreFoundation.CGRect : Then {
+}
+extension CoreFoundation.CGSize : Then {
+}
+extension CoreFoundation.CGVector : Then {
+}
+extension Swift.Array : Then {
+}
+extension Swift.Dictionary : Then {
+}
+extension Swift.Set : Then {
+}
+extension Foundation.JSONDecoder : Then {
+}
+extension Foundation.JSONEncoder : Then {
+}
+extension UIKit.UIEdgeInsets : Then {
+}
+extension UIKit.UIOffset : Then {
+}
+extension UIKit.UIRectEdge : Then {
+}
